@@ -108,7 +108,7 @@ const HabrMarkdown = (() => {
   function htmlToMarkdown(root, _baseUrl) {
     const md = getService().turndown(root);
     return md
-      .replace(/([^\s])\[(\s*[^\]]+\s*)\]\(/g, '$1 [$2](')
+      // .replace(/([^\s])\[(\s*[^\]]+\s*)\]\(/g, '$1 [$2](')
       .replace(/\n{3,}/g, '\n\n')
       .trim();
   }
